@@ -157,7 +157,11 @@ class MainMenuState extends MusicBeatState
 
 		trace(StoryMenuState.weekCompleted);
 
-		super.create();
+		#if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end	
+		
+			super.create();
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
