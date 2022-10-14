@@ -115,7 +115,7 @@ class HealthIcon extends FlxSprite
 				if (!FileSystem.exists(path))
 				#else
 				var path:String = Paths.getPreloadPath(iconPath + char + '.json');
-				if (!Assets.exists(path))
+				if (Assets.exists(path))
 				#end
 				{
 					path = Paths.getPreloadPath(iconPath + 'gaster.json');
