@@ -1,5 +1,6 @@
 package;
 
+#if MODS_ALLOWED
 import haxe.Json;
 import sys.io.File;
 import sys.FileSystem;
