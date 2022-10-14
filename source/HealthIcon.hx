@@ -1,6 +1,6 @@
 package;
 
-#if MODS_ALLOWED
+
 import haxe.Json;
 import sys.io.File;
 import sys.FileSystem;
@@ -106,7 +106,7 @@ class HealthIcon extends FlxSprite
 			else
 			{
 				var iconPath:String = 'images/icons/icon-';
-				#if MODS_ALLOWED
+				#if sys 
 				var path:String = Paths.modFolders(iconPath + char + '.json');
 				if (!FileSystem.exists(path)) {
 					path = Paths.getPreloadPath(iconPath + char + '.json');
@@ -121,7 +121,7 @@ class HealthIcon extends FlxSprite
 					path = Paths.getPreloadPath(iconPath + 'gaster.json');
 				}
 
-				#if MODS_ALLOWED
+				#if sys
 				var rawJson = File.getContent(path);
 				#else
 				var rawJson = Assets.getText(path);
