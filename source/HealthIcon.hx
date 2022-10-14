@@ -106,7 +106,7 @@ class HealthIcon extends FlxSprite
 			else
 			{
 				var iconPath:String = 'images/icons/icon-';
-				#if sys 
+				#if MODS_ALLOWED
 				var path:String = Paths.modFolders(iconPath + char + '.json');
 				if (!FileSystem.exists(path)) {
 					path = Paths.getPreloadPath(iconPath + char + '.json');
